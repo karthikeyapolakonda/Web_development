@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - FBS</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #d0e5eb, #f7f9fa);
+        }
+        header {
+            background: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        header img {
+            vertical-align: middle;
+        }
+        header h1 {
+            color: rgb(229, 103, 103);
+            margin: 0;
+        }
+        nav {
+            background: rgb(139, 210, 59);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: rgb(100, 180, 40);
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .form-card h3 {
+            text-align: center;
+            color: chocolate;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: rgb(139, 210, 59);
+        }
+        textarea {
+            resize: vertical;
+        }
+        .form-inline {
+            display: flex;
+            gap: 10px;
+        }
+        .form-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: rgb(139, 210, 59);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background: rgb(100, 180, 40);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            color: rgb(220, 94, 94);
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .note {
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="cmr_logo.png" alt="FBS LOGO" width="80" height="80">
+        <h1>CMRTC ONLINE EBOOKS WEBSITE</h1>
+    </header>
+
+    <nav>
+        <a href="c_index.html">Home</a>
+        <a href="c_login.html">Login</a>
+        <a href="c_registration.html">Registration</a>
+        <a href="c_cart.html">Cart</a>
+    </nav>
+
+    <main>
+        <div class="form-card">
+            <h3>Registration Form</h3>
+            <form name="f1">
+                <div class="form-group">
+                    <label>Name:*</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:*</label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Email ID:*</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number:*</label>
+                    <input type="text" name="phno" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender:*</label>
+                    <div class="form-options">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Language Known:*</label>
+                    <div class="form-options">
+                        <label><input type="checkbox" name="lang" value="English"> English</label>
+                        <label><input type="checkbox" name="lang" value="Telugu"> Telugu</label>
+                        <label><input type="checkbox" name="lang" value="Hindi"> Hindi</label>
+                        <label><input type="checkbox" name="lang" value="Tamil"> Tamil</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Address:*</label>
+                    <textarea name="address" rows="3" required></textarea>
+                </div>
+                <div class="btn-group">
+                    <input type="submit" value="SUBMIT">
+                    <input type="reset" value="RESET">
+                </div>
+                <p class="note">* fields are mandatory</p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        (C) 2024 All rights reserved by CMR ebooks
+    </footer>
+</body>
+</html>
