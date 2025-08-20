@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - FBS</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f3f8fa, #dceff5);
+            color: #333;
+        }
+        header {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        header img {
+            height: 80px;
+        }
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 1.8rem;
+            color: rgb(220, 94, 94);
+        }
+        nav {
+            background: rgb(139, 210, 59);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: rgb(100, 180, 40);
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        h3 {
+            text-align: center;
+            color: chocolate;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #f7f7f7;
+            color: #333;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tfoot td {
+            font-weight: bold;
+            background: #fafafa;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            color: rgb(220, 94, 94);
+            font-size: 14px;
+            margin-top: 30px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                display: none;
+            }
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="cmr_logo.png" alt="FBS LOGO">
+        <h1>CMRTC ONLINE EBOOKS WEBSITE</h1>
+    </header>
+
+    <nav>
+        <a href="c_index.html">Home</a>
+        <a href="c_login.html">Login</a>
+        <a href="c_registration.html">Registration</a>
+        <a href="c_cart.html">Cart</a>
+    </nav>
+
+    <main>
+        <h3>Cart</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Book Name">Java Programming</td>
+                    <td data-label="Price">Rs. 2300/-</td>
+                    <td data-label="Quantity">2</td>
+                    <td data-label="Amount">Rs. 4600/-</td>
+                </tr>
+                <tr>
+                    <td data-label="Book Name">Web Technologies</td>
+                    <td data-label="Price">Rs. 3000/-</td>
+                    <td data-label="Quantity">1</td>
+                    <td data-label="Amount">Rs. 3000/-</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td>3</td>
+                    <td>Rs. 7600/-</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <footer>
+        (C) 2024 All rights reserved by CMR ebooks
+    </footer>
+</body>
+</html>
